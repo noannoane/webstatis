@@ -1,0 +1,121 @@
+/* Latihan6.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(230, 181, 119);
+    color: #333;
+}
+
+header {
+    background-color: rgb(98, 180, 98);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: #6de792;
+    padding: 10px;
+    text-align: center; /* Menengahkan navigation bar */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Menggunakan flexbox untuk menyusun item navigasi */
+    justify-content: center; /* Menengahkan item navigasi */
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px; /* Menambahkan padding pada item navigasi */
+    border-radius: 5px; /* Menambahkan border-radius untuk tampilan lebih menarik */
+    background-color: rgb(36, 201, 50); /* Warna latar belakang */
+}
+
+nav a:hover {
+    background-color: #31708f; /* Warna latar belakang saat hover */
+}
+
+main {
+    display: flex;
+    flex-direction: column; /* Membuat box makanan berurutan ke bawah */
+    align-items: center; /* Menengahkan box makanan */
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: burlywood;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.food-box {
+    width: 100%; /* Menggunakan lebar penuh */
+    margin-bottom: 20px; /* Jarak antar box makanan */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Menengahkan konten di dalam box */
+}
+
+.food-box img {
+    max-width: 100%; /* Gambar akan selalu sesuai lebar box */
+    border-radius: 8px; /* Memberikan efek melengkung pada gambar */
+    margin-bottom: 10px; /* Jarak antara gambar dan teks */
+}
+
+/* Latihan6.css */
+
+/* Tambahkan gaya untuk food-box */
+.food-box {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Tambahkan gaya untuk gambar dalam food-box */
+.food-box img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Tambahkan gaya untuk food-info */
+.food-info {
+    text-align: left;
+}
+
+.recipe {
+    display: flex;
+    justify-content:
+    space-between;
+}
+
+.recipe .ingredients,
+.recipe .instructions {
+    flex: 1;
+    padding: 0 10px;
+}
+
+footer {
+    background-color: #5cb85c;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
