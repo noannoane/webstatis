@@ -1,0 +1,403 @@
+/* Tambahkan ke dalam file styles.css */
+*{
+
+  font-family: 'poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  background-image: url(japanStreet.jpg);
+  margin: 0;
+  font-family: 'poppins', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: honeydew;
+}
+
+.navbar .navbar-nav a {
+  color: honeydew;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: #ff66b2;
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: honeydew;
+  margin: 0 0.4rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: #ff66b2;
+}
+
+#hamburger-menu{
+  display: none;
+}
+
+/* media queries */
+
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+}
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-image: url(japanStreet2.jpg);
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: #fffbfb;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2.5rem;
+  }
+}
+
+/* phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+/* footer */
+
+footer {
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 20px; /* Menambahkan margin di bagian atas footer */
+  margin-left: 40px; /* Menambahkan margin di sisi kiri footer */
+  margin-right: 30px; /* Menambahkan margin di sisi kanan footer */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-container p {
+  margin: 0;
+}
+
+.copyright{
+  color: #ff6666;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #8B0000;
+}
+
+.social-icons img {
+  width: 30px; /* Sesuaikan ukuran ikon sosial media */
+  height: 30px;
+}
+
+/* home section */
+.hero {
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Menempatkan konten di tengah vertikal */
+}
+
+.greetings {
+  width: 100%;
+  height: auto;
+  display: flex;
+  font-size: 1em;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+
+.greetings h1,
+p {
+  margin: 0;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 9em;
+  color: #fff;
+}
+
+p {
+  font-size: 1.5em;
+  color: #ff66b2;
+}
+
+/* about */
+
+/* Tambahkan ke dalam file UTS-design-webstatis.css */
+.about-us-section {
+  text-align: center;
+  padding: 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Membuat tinggi konten setara dengan tinggi viewport */
+}
+
+.about-background {
+  color: #8B0000;
+  background-color: #fff;
+  width: 80%;
+  max-width: 600px; /* Membatasi lebar maksimum untuk layar kecil */
+  padding: 50px;
+  margin-bottom: 20px;
+  font-size: 1.5em; /* Menyesuaikan ukuran teks */
+  text-align: center;
+  display: inline-block;
+}
+
+.about-background h1 {
+  font-size: 2em; /* Menyesuaikan ukuran teks */
+}
+
+.about-background p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.about-points {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-point {
+  width: 90%;
+  max-width: 400px; /* Membatasi lebar maksimum untuk layar kecil */
+  background: #fff;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-point h2 {
+  font-size: 1.5em;
+  color: #000;
+}
+
+.about-point p {
+  font-size: 1em;
+  color: #3d0642;
+}
+
+/* Media Queries untuk layar kecil (tablet dan smartphone) */
+@media only screen and (max-width: 768px) {
+  .about-background {
+    width: 90%; /* Mengurangi lebar pada layar kecil */
+    padding: 30px;
+  }
+
+  .about-points {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-point {
+    width: 90%;
+  }
+}
+
+
+/*image gallery  */
+
+.gallery-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Mengisi tinggi viewport */
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  width: 80%; /* Lebar galeri */
+  text-align: center; /* Menengahkan caption */
+}
+
+.gallery-item img {
+  width: 65%; /* Lebar gambar 100% dari parent */
+  height: auto; /* Mengikuti aspek rasio gambar */
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+  margin-top: 100px;
+}
+
+.caption {
+  margin-top: 3px; /* Menambah jarak antara gambar dan caption */
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #ff66b2;
+}
+
+/* Tambahkan gaya untuk tabel dan notifikasi */
+.registration-section {
+  padding: 140px;
+  color: #ff66b2;
+  font-weight: bold;
+  text-align: center;
+}
+
+.registration-section form {
+  color: #ff66b2;
+  font-weight: bold;
+}
+
+.registration-section table {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-image: url(japanStreet2.jpg);
+}
+
+.registration-section td {
+  padding: 70px;
+  border: 1px solid #3e0651;
+}
+
+.registration-section button {
+  margin-top: 10px;
+}
+
+/* Media Queries untuk layar kecil (tablet dan smartphone) */
+@media screen and (max-width: 450px) {
+  .registration-section {
+    padding: 70px; /* Sesuaikan padding sesuai kebutuhan */
+  }
+
+  .registration-section table {
+    width: 100%;
+    max-width: none; /* Tambahkan aturan ini untuk menghapus max-width */
+    margin: 0 auto; /* Tambahkan aturan ini untuk memusatkan tabel */
+  }
+
+  .registration-section td {
+    padding: 20px; /* Sesuaikan padding sesuai kebutuhan */
+  }
+}
+
+/* contact us */
+
+.contact-section {
+  padding: 80px;
+  font-size: larger;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+  text-align: center; /* Menengahkan teks dan elemen inline */
+}
+
+.contact-box img {
+  width: 60%;
+  height: 60%;
+  margin-bottom: 20px;
+  margin-top: 75px;
+}
+
+/* Menambahkan class khusus untuk gambar Instagram dan TikTok */
+.instagram-icon,
+.tiktok-icon {
+  display: inline-block;
+  margin: 0 10px; /* Menambahkan jarak antara gambar Instagram dan TikTok */
+}
+
+
+/* CSS untuk tata letak resonsif big landscape tablets, laptops, and desktops */
+
+/* CSS untuk tata letak responsif portrait e-readers (nook/kindle), smaller tablets @ 600 or @ 640 wide. */
+@media only screen and (max-width: 1025px) {
+  .greetings {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 9em;
+    color: #fff;
+  }
+
+  .gallery-track {
+    margin: 0; /* Menghilangkan margin negatif pada layar kecil */
+  }
+}
