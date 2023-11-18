@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - WEARE.</title>
+    <link rel="shortcut icon" href="favicon.weare.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./UTS-design-webstatis.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="UTS-webstatis.html" class="navbar-logo"> <i>WEARE.</i></a>
+        <!-- Tombol menu-toggle adalah tombol untuk tampilan mobile -->
+          <div class="navbar-nav">
+            <a href="UTS-webstatis.html">Home</a>
+            <a href="UTS-aboutus-webstatis.html">About</a>
+            <a href="UTS-Gallery-webstatis.html">Gallery</a>
+            <a href="UTS-Registration-webstatis.html">Registration</a>
+            <a href="UTS-contactUS-webstatis.html">Contact</a>
+          </div>
+          <!-- nav-list adalah kontainer untuk item menu -->
+          <div class="navbar-extra">
+            <a href="UTS-Registration-webstatis.html" id="shopping-bag"><i data-feather="shopping-bag"></i></a>
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+          </ul>
+        </div>
+      </nav>
+
+    <!-- Registration Section -->
+    <main>
+        <section class="registration-section">
+            <h2>REGISTRATION</h2>
+            <form id="registration-form">
+                <table>
+                    <tr>
+                        <td><label for="name">Nama:</label></td>
+                        <td><input type="text" id="name" name="name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone">Nomer Telphone:</label></td>
+                        <td><input type="tel" id="phone" name="phone" pattern="[0-9]{12}" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="design">Design yang Mau Dibeli:</label></td>
+                        <td>
+                            <select id="design" name="design" required>
+                                <option value="design1">Design 1</option>
+                                <option value="design2">Design 2</option>
+                                <option value="design3">Design 3</option>
+                                <option value="design4">Design 4</option>
+                                <option value="design5">Design 5</option>
+                                <option value="design6">Design 6</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+
+                <button onclick="submitForm()">Submit</button>
+            </form>
+            
+            <!-- Notifikasi -->
+            <div id="notification" class="notification" style="display: none;">
+                <p>Transaksi diterima! Terima kasih.</p>
+            </div>
+            
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="copyright">
+                <p>&copy; 2023 Your Clothing Brand. All rights reserved.</p>
+            </div>
+            <div class="design-by">
+                <p>Design by Brann</p>
+            </div>
+            <div class="social-icons">
+                <!-- Replace the href values with your actual social media links -->
+                <a href="https://instagram.com/weare.ink?igshid=OGQ5ZDc2ODk2ZA==" id="instagram"><i data-feather="instagram"></i></a>
+                <a href="https://www.tiktok.com/@weare.ink?_t=8gzwjRch9Sk&_r=1" id="music"><i data-feather="music"></i></a>
+                <!-- Add more social media icons as needed -->
+            </div>
+        </div>
+    </footer>
+  
+
+    <script>
+        function submitForm() {
+            // Dapatkan formulir
+            var form = document.getElementById('registration-form');
+    
+            // Simulasikan pengiriman formulir (Anda dapat menggantinya dengan logika pengiriman data ke server)
+            // Di sini, kita hanya menampilkan notifikasi untuk tujuan demonstrasi
+            alert('Transaksi diterima! Terima kasih.');
+    
+            // Tampilkan notifikasi yang sebenarnya
+            var notification = document.getElementById('notification');
+            notification.style.display = 'block';
+    
+            // Set timeout untuk menyembunyikan notifikasi setelah beberapa detik
+            setTimeout(function () {
+                notification.style.display = 'none';
+            }, 3000); // Notifikasi akan disembunyikan setelah 3 detik
+        }
+
+    </script>
+    <!-- JavaScript Code -->
+    <script src="UTS-code-webstatis.js"></script>
+    <script>
+        feather.replace();
+      </script>
+</body>
+</html>
+
+
+
